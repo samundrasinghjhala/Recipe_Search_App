@@ -8,7 +8,29 @@ const Recipe = ({ title, calories, image, ingredients }) => {
     };
     return (
         <>
-            <div class="px-2 md:px-6 my-3 w-full text-slate-700 dark:text-white flex flex-col items-center">
+            <article className="p-3 duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <div className="relative flex items-end overflow-hidden rounded-xl">
+                    <img src={img1} alt="Oppo Mobile" />
+                </div>
+                <div className="p-2 mt-1">
+                    <h2 className="text-slate-700 font-semibold">{title}</h2>
+                    <p className="mt-1 text-sm text-slate-400">Calories :-{calories}</p>
+                    <div className="flex items-end justify-between mt-3">
+                        <p className="text-lg font-bold text-green-500"></p>
+                        {isFavorite ? (
+                            <button class="px-2 py-2 transition ease-in duration-200 uppercase rounded-full bg-red-800 hover:text-white border-2 border-white focus:outline-none">
+                                Added to favorites
+                            </button>
+                        ) : (
+                            <button class="px-2 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none" onClick={handleAddFavorite}>
+                                Add favorite
+                            </button>
+                        )}
+                    </div>
+                </div>
+            </article>
+
+            {/* <div class="px-2 md:px-6 my-3 w-full text-slate-700 dark:text-white flex flex-col items-center">
 
                 <div class="max-w-xl text-left flex flex-col w-full items-center justify-center md:p-4 md:border border-slate-300 dark:border-slate-600 rounded-xl">
                     <h1 class="text-left text-sm md:text-lg font-bold leading-normal">
@@ -49,7 +71,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

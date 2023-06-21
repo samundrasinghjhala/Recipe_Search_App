@@ -46,13 +46,16 @@ function App() {
         </div>
 
       </header>
-
-      {recipes.map((recipe) => (
-        <Recipe title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-          ingredients={recipe.recipe.ingredients} />
-      ))}
+      <section className="py-24 home-Page-image">
+        <div className="grid max-w-6xl grid-cols-1 gap-10 p-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {recipes.map((recipe) => (
+            <Recipe title={recipe.recipe.label}
+              calories={recipe.recipe.calories}
+              image={recipe.recipe.image}
+              ingredients={recipe.recipe.ingredients} />
+          ))}
+        </div>
+      </section>
 
     </>
   );
