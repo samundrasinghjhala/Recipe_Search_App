@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { FcLike } from "react-icons/fc";
 import 'react-toastify/dist/ReactToastify.css';
 
-
 const Recipe = (props) => {
     const [favorite, setFavorite] = useState(false);
 
@@ -15,7 +14,7 @@ const Recipe = (props) => {
         <>
             <article className="p-3 duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl hover:transform hover:scale-105 ">
                 <div className="relative flex items-end overflow-hidden rounded-xl">
-                    <img src={img1} alt="Oppo Mobile" />
+                    <img src={img1} alt="Recipe image" />
                 </div>
                 <div className="p-2 mt-1">
                     <h2 className="text-slate-700 font-semibold">{props.title}</h2>
@@ -31,14 +30,10 @@ const Recipe = (props) => {
                             <button className="px-2 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none" onClick={handleAddFavorite}>
                                 <FcLike />
                             </button>
-
                         )}
                     </div>
                 </div>
             </article>
-
-
-
         </>
     )
 }

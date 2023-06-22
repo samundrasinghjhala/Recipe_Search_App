@@ -10,4 +10,14 @@
   text-align: center;
 }
 
+.header-image {
+  background: url("../src/banner5.jpg") center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
+.footer-image {
+  background: url("../src/banner.jpg") center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
